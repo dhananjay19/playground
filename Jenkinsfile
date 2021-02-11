@@ -46,6 +46,11 @@ pipeline {
             echo 'Hello World!'
          }
       }
+      stage('release') {
+         steps {
+            echo 'Hello World!'
+         }
+      }
       stage('Infra-QA-EAST') {
          steps {
             echo 'Hello World!'
