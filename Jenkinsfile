@@ -5,10 +5,15 @@
 pipeline {
    agent any
    stages {
-      stage('Say Hello') {
+      stage('Git Checkout') {
          steps {
             echo 'Hello World!'
          }
+      stage('Unit Test') {
+         steps {
+            echo 'Hello World!'
+         }
+         
       }
    }
 }
