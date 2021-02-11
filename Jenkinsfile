@@ -41,7 +41,7 @@ pipeline {
             echo 'Hello World!'
          }
       }
-      stage('ATTD Tests') {
+      stage('ATTD Tests-DEV') {
          steps {
             echo 'Hello World!'
          }
@@ -56,7 +56,7 @@ pipeline {
             echo 'Hello World!'
          }
       }
-      stage('ATTD Tests') {
+      stage('ATTD Tests-QA EAST') {
          steps {
             echo 'Hello World!'
          }
@@ -71,7 +71,7 @@ pipeline {
             echo 'Hello World!'
          }
       }
-      stage('ATTD Tests') {
+      stage('ATTD Tests- QA WEST') {
          steps {
             echo 'Hello World!'
          }
