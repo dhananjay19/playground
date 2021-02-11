@@ -9,11 +9,12 @@ pipeline {
          steps {
             echo 'Hello World!'
          }
+      }
       stage('Unit Test') {
          steps {
             echo 'Hello World!'
          }
-      }
+      
       }
    }
 }
