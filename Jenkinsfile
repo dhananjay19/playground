@@ -111,7 +111,7 @@ pipeline {
             echo 'Provision  Prod EAST Infrastructure'
          }
       }
-      stage('Deploy- Prod EAST Infra') {
+      stage('Deploy- Prod EAST') {
          steps {
             echo 'Deploy Prod EAST '
          }
@@ -126,7 +126,7 @@ pipeline {
             echo 'Provision  Prod WEST Infrastructure'
          }
       }
-      stage('Deploy- Prod WEST Infra') {
+      stage('Deploy- Prod WEST ') {
          steps {
             echo 'Deploy Prod WEST '
          }
