@@ -46,7 +46,7 @@ pipeline {
             echo 'Runs ATDD Tests for DEV environment'
          }
       }
-      stage('release') {
+      stage('Create release Candidiate) {
          steps {
                 script {
                     env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!',
@@ -65,6 +65,11 @@ pipeline {
             echo 'Deploys the Docker container in QA EAST ECS clustor'
          }
       }
+       stage('Deployment Validation- QA EAST') {
+         steps {
+            echo 'Deployment Validation for QA EAST environment'
+         }
+      }
       stage('ATTD Tests-QA EAST') {
          steps {
             echo 'Runs ATDD Tests for QA EAST environment'
@@ -80,10 +85,56 @@ pipeline {
             echo 'Deploys the Docker container in QA WEST ECS clustor'
          }
       }
+      stage('Deployment Validation - QA WEST') {
+         steps {
+            echo 'Deployment Validation for QA WEST environment'
+         }
+      }
       stage('ATTD Tests- QA WEST') {
          steps {
             echo 'Runs ATDD Tests for QA WEST environment'
          }
       }
+
+     stage('Prod Release) {
+         steps {
+                script {
+                    env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!',
+                            parameters: [choice(name: 'RELEASE_SCOPE', choices: 'patch\nminor\nmajor', description: 'What is the release scope?')]
+                }
+                echo "${env.RELEASE_SCOPE}"
+            }
+      }
+      
+      stage('Provision- Prod EAST Infra') {
+         steps {
+            echo 'Provision  Prod EAST Infrastructure'
+         }
+      }
+      stage('Deploy- Prod EAST Infra') {
+         steps {
+            echo 'Deploy Prod EAST '
+         }
+      }
+      stage('Deployment Validation- Prod EAST Infra') {
+         steps {
+            echo 'Validate the Prod EAST Deployement '
+         }
+      }  
+      stage('Provision- Prod WEST Infra') {
+         steps {
+            echo 'Provision  Prod WEST Infrastructure'
+         }
+      }
+      stage('Deploy- Prod WEST Infra') {
+         steps {
+            echo 'Deploy Prod WEST '
+         }
+      }
+      stage('Deployment Validation- Prod WEST Infra') {
+         steps {
+            echo 'Validate the Prod WEST Deployement '
+         }
+      }       
    }
 }
