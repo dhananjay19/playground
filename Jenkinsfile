@@ -46,7 +46,7 @@ pipeline {
             echo 'Runs ATDD Tests for DEV environment'
          }
       }
-      stage('Create release Candidiate) {
+      stage('Create release Candidiate') {
          steps {
                 script {
                     env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!',
@@ -96,7 +96,7 @@ pipeline {
          }
       }
 
-     stage('Prod Release) {
+     stage('Prod Release') {
          steps {
                 script {
                     env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!',
