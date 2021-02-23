@@ -7,43 +7,43 @@ pipeline {
    stages {
       stage('Unit Test') {
          steps {
-            echo 'Hello World!'
+            echo 'Runs unit test, ex: maven test'
          }
       }
       stage('Sonar') {
          steps {
-            echo 'Hello World!'
+            echo 'Runs sonar code coverage, ex jacoc or codeco'
          }
       }
       
       stage('EratoCode') {
          steps {
-            echo 'Hello World!'
+            echo 'OSS scans'
          }
       }
       stage('Maven Build') {
          steps {
-            echo 'Hello World!'
+            echo 'Runs maven build'
          }
       }
       stage('Docker Build') {
          steps {
-            echo 'Hello World!'
+            echo 'Build docker image from Dockerfile '
          }
       }
       stage('dev-infra') {
          steps {
-            echo 'Hello World!'
+            echo 'Provisions the Dev infrastructure in aws EAST Region'
          }
       }
       stage('deploy') {
          steps {
-            echo 'Hello World!'
+            echo 'Deploys the Docker container in DEV ECS clustor'
          }
       }
       stage('ATTD Tests-DEV') {
          steps {
-            echo 'Hello World!'
+            echo 'Runs ATDD Tests for DEV environment'
          }
       }
       stage('release') {
@@ -57,32 +57,32 @@ pipeline {
       }
       stage('Infra-QA-EAST') {
          steps {
-            echo 'Hello World!'
+            echo 'Provisions the QA infrastructure in aws EAST Region'
          }
       }
       stage('Deploy-QA-EAST') {
          steps {
-            echo 'Hello World!'
+            echo 'Deploys the Docker container in QA EAST ECS clustor'
          }
       }
       stage('ATTD Tests-QA EAST') {
          steps {
-            echo 'Hello World!'
+            echo 'Runs ATDD Tests for QA EAST environment'
          }
       }
       stage('Infra-QA-WEST') {
          steps {
-            echo 'Hello World!'
+            echo 'Provisions the QA infrastructure in aws EAST Region'
          }
       }
       stage('Deploy-QA-WEST') {
          steps {
-            echo 'Hello World!'
+            echo 'Deploys the Docker container in QA WEST ECS clustor'
          }
       }
       stage('ATTD Tests- QA WEST') {
          steps {
-            echo 'Hello World!'
+            echo 'Runs ATDD Tests for QA WEST environment'
          }
       }
    }
