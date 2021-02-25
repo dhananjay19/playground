@@ -75,6 +75,16 @@ pipeline {
             echo 'Runs ATDD Tests for QA EAST environment'
          }
       }
+      stage('Promote- pending Canaries') {
+         steps {
+            echo 'Promote- pending Canaries'
+         }
+      }
+      stage('Validate deployment post canary promotion') {
+         steps {
+            echo 'Validate deployment post canary promotion- EAST'
+         }
+      }
       stage('Infra-QA-WEST') {
          steps {
             echo 'Provisions the QA infrastructure in aws EAST Region'
@@ -93,6 +103,16 @@ pipeline {
       stage('ATTD Tests- QA WEST') {
          steps {
             echo 'Runs ATDD Tests for QA WEST environment'
+         }
+      }
+      stage('Promote- pending Canaries') {
+         steps {
+            echo 'Promote- pending Canaries'
+         }
+      }
+      stage('Validate deployment post canary promotion') {
+         steps {
+            echo 'Validate deployment post canary promotion-WEST'
          }
       }
 
@@ -120,7 +140,17 @@ pipeline {
          steps {
             echo 'Validate the Prod EAST Deployement '
          }
-      }  
+      } 
+      stage('Promote- pending Canaries') {
+         steps {
+            echo 'Promote- pending Canaries'
+         }
+      }
+      stage('Validate deployment post canary promotion') {
+         steps {
+            echo 'Validate deployment post canary promotion-WEST'
+         }
+      }
       stage('Provision- Prod WEST Infra') {
          steps {
             echo 'Provision  Prod WEST Infrastructure'
@@ -135,6 +165,16 @@ pipeline {
          steps {
             echo 'Validate the Prod WEST Deployement '
          }
-      }       
+      }
+      stage('Promote- pending Canaries') {
+         steps {
+            echo 'Promote- pending Canaries'
+         }
+      }
+      stage('Validate deployment post canary promotion') {
+         steps {
+            echo 'Validate deployment post canary promotion-WEST'
+         }
+      }
    }
 }
