@@ -146,9 +146,9 @@ pipeline {
             echo 'Promote- pending Canaries'
          }
       }
-      stage('Validate deployment post canary promotion - Prod WEST') {
+      stage('Validate deployment post canary promotion - Prod EAST') {
          steps {
-            echo 'Validate deployment post canary promotion-WEST'
+            echo 'Validate deployment post canary promotion-EAST'
          }
       }
       stage('Provision- Prod WEST Infra') {
