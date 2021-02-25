@@ -75,12 +75,12 @@ pipeline {
             echo 'Runs ATDD Tests for QA EAST environment'
          }
       }
-      stage('Promote- pending Canaries') {
+      stage('Promote- pending Canaries - QA EAST') {
          steps {
             echo 'Promote- pending Canaries'
          }
       }
-      stage('Validate deployment post canary promotion') {
+      stage('Validate deployment post canary promotion - QA EAST') {
          steps {
             echo 'Validate deployment post canary promotion- EAST'
          }
@@ -105,12 +105,12 @@ pipeline {
             echo 'Runs ATDD Tests for QA WEST environment'
          }
       }
-      stage('Promote- pending Canaries') {
+      stage('Promote- pending Canaries- QA WEST') {
          steps {
             echo 'Promote- pending Canaries'
          }
       }
-      stage('Validate deployment post canary promotion') {
+      stage('Validate deployment post canary promotion - QA WEST') {
          steps {
             echo 'Validate deployment post canary promotion-WEST'
          }
@@ -141,12 +141,12 @@ pipeline {
             echo 'Validate the Prod EAST Deployement '
          }
       } 
-      stage('Promote- pending Canaries') {
+      stage('Promote- pending Canaries- Prod EAST') {
          steps {
             echo 'Promote- pending Canaries'
          }
       }
-      stage('Validate deployment post canary promotion') {
+      stage('Validate deployment post canary promotion - Prod WEST') {
          steps {
             echo 'Validate deployment post canary promotion-WEST'
          }
@@ -166,12 +166,12 @@ pipeline {
             echo 'Validate the Prod WEST Deployement '
          }
       }
-      stage('Promote- pending Canaries') {
+      stage('Promote- pending Canaries - Prod WEST') {
          steps {
             echo 'Promote- pending Canaries'
          }
       }
-      stage('Validate deployment post canary promotion') {
+      stage('Validate deployment post canary promotion - Prod WEST') {
          steps {
             echo 'Validate deployment post canary promotion-WEST'
          }
